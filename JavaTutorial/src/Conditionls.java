@@ -10,10 +10,10 @@ public class Conditionls{
 //            System.out.println("You can not enter");
 //        }
 
-        Scanner scn = new Scanner(System.in);
+        Scanner input = new Scanner(System.in);
 //        System.out.println("Enter Age");
-//        int iage = scn.nextInt();
-//        switch (iage){
+//        int userAge = input.nextInt();
+//        switch (userAge){
 //            case 18:
 //                System.out.println("You are become just adult");
 //                break;
@@ -30,7 +30,7 @@ public class Conditionls{
 
         // tax calculate <250000 tax = 0 , >=250000 to <= 500000 tax = 5% , >500000 to <=1000000 tax = 10% , >1000000 tax = 20%
 //        System.out.println("Enter Your Income :");
-//        int income = scn.nextInt();
+//        int income = input.nextInt();
 //        float tax = 0.00f;
 //        if(income >= 250000 && income <= 500000){
 //            tax += income * 0.05f;
@@ -46,7 +46,7 @@ public class Conditionls{
         
         // Type of website
         System.out.println("Enter website");
-        String website = scn.nextLine();
+        String website = input.nextLine();
         if(website.endsWith(".com")){
             System.out.println("Commercial website");
         } else if (website.endsWith(".org")) {

@@ -11,23 +11,24 @@ public class Loops {
 //        }
 
         // sum of first n even numbers
-//        int sum = 0;
-//        int i = 0 , n = 10;
-//        while(i < n){
-//            sum += 2 * i;
-//            i++;
-//        }
-//        System.out.println("Sum of first 10 even numbers: " + sum);
+        int sum = 0;
+        int i = 0 , range = 10;
+        while(i < range){
+            sum += 2 * i;
+            i++;
+        }
+        System.out.println("Sum of first 10 even numbers: " + sum);
 
         // multiplication table of a number
-        Scanner scn = new Scanner(System.in);
+        Scanner input = new Scanner(System.in);
         System.out.println("Enter Number for printing table: ");
-        int number = scn.nextInt();
-//        int i = 1;
-//        while(i <= 10){
-//            System.out.printf("%d x %d = %d\n" , number , i , number * i);  // You are not following the naming convention .?
-//            i++;
-//        }
+        int number = input.nextInt();
+        int multiplier = 1;
+        while(multiplier <= 10){
+            int product = number * multiplier;
+            System.out.printf("%d x %d = %d\n" , number , multiplier , product);
+            multiplier++;
+        }
 
         // factorial
         int factorial = 1;

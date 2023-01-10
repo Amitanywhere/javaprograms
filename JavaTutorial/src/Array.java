@@ -15,12 +15,12 @@ public class Array {
 
         // 3. declaration than memory allocation and initialization together
 //        int [] ages = {34 , 54 , 23 , 17 , 87 , 45};
-        Scanner scn = new Scanner(System.in);
-//        int arrsize = scn.nextInt();
-//        int[] ages = new int[arrsize];
+        Scanner input = new Scanner(System.in);
+//        int arrSize = input.nextInt();
+//        int[] ages = new int[arrSize];
 //        for(int i = 0; i<ages.length; i++){
 //            System.out.printf("Enter %d element of array\n" , i);
-//            ages[i] = scn.nextInt();
+//            ages[i] = input.nextInt();
 //        }
 
 //        for (int i=0; i<ages.length; i++){
@@ -28,19 +28,19 @@ public class Array {
 //        }
 
         // printing element using for each lop
-//        for(int e:ages){
-//            System.out.println(e);
+//        for(int age:ages){
+//            System.out.println(age);
 //        }
         // 2-d array or matrix
         System.out.println("Enter number of rows-");
-        int rowNumber = scn.nextInt();
+        int rowNumber = input.nextInt();
         System.out.println("Enter number of columns-");
-        int colNumber = scn.nextInt();
+        int colNumber = input.nextInt();
         int[][] matrix = new int[rowNumber][colNumber];
         for (int row=0; row<rowNumber; row++){
             for (int col=0; col<colNumber; col++){
                 System.out.printf("Enter %d row %d column element- \n" , row+1 , col+1);
-                matrix[row][col] = scn.nextInt();
+                matrix[row][col] = input.nextInt();
             }
         }
         // print matrix
