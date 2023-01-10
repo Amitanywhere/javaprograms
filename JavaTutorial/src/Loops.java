@@ -25,7 +25,7 @@ public class Loops {
         int number = scn.nextInt();
 //        int i = 1;
 //        while(i <= 10){
-//            System.out.printf("%d x %d = %d\n" , number , i , number * i);
+//            System.out.printf("%d x %d = %d\n" , number , i , number * i);  // You are not following the naming convention .?
 //            i++;
 //        }
 
