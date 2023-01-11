@@ -1,20 +1,20 @@
 
 public class DataTypes{
     public  static  void main(String[] args){
-        byte a = 12;
+        byte byte1 = 12;
         // can range between -128 to 127
-        int b = 568;
+        int int1 = 568;
         // can range between - 2^31 to 2^31 -1
-        float c = 2.56f;
+        float float1 = 2.56f;
         double dbl = 2.34d;
-        short d = 56;
+        short srt = 56;
         // can range between -2^(16/2) to 2^(16/2)-1
-        boolean e = true;
+        boolean isGood = true;
         // can be true or false
-        long f = 567889l;
+        long lng = 567889l;
         // can range between - 2^63 to 2^63 - 1
-        char g = 'B';
+        char character = 'B';
         // it supports unicode
-        System.out.println(d);
+        System.out.println(dbl);
     }
 }

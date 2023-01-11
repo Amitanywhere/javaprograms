@@ -3,23 +3,33 @@ import java.util.Scanner;
 
 public class Operators{
     public static void main(String[] args){
-        Scanner scn = new Scanner(System.in);
+        Scanner input = new Scanner(System.in);
         System.out.println("Enter 1st  number");
-        int a = scn.nextInt();
+        float num1 = input.nextInt();
         System.out.println("Enter 2nd number");
-        int b = scn.nextInt();
+        float num2 = input.nextInt();
         // Arithmetic operator
-        System.out.printf("a + b = %d\n" , a+b);
-        System.out.printf("a - b = %d\n" , a-b);
-        System.out.printf("a * b = %d\n" , a*b);
-        System.out.printf("a / b = %d\n" , a/b);
-        System.out.printf("a modulo b = %d\n" , a%b);
+        float sum = num1 + num2;
+        System.out.printf("num1 + num2 = %d\n" , sum);
+
+        float difference = num1 - num2;
+
+        System.out.printf("num1 - num2 = %d\n" , difference);
+
+        float product = num1 * num2;
+        System.out.printf("num1 * num2 = %d\n" , product);
+
+        float quotient = num1 / num2;
+        System.out.printf("num1 / num2 = %d\n" , quotient);
+
+        float reminder = num1 % num2;
+        System.out.printf("num1 modulo num2 = %d\n" , reminder);
 
         // comparison operator
-        System.out.printf("a == b = %b\n" , a==b);
-        System.out.printf("a > b = %b\n" , a>b);
-        System.out.printf("a < b = %b\n" , a<b);
-        System.out.printf("a != b = %b\n" , a!=b);
+        System.out.printf("num1 == num2 = %b\n" , num1==num2);
+        System.out.printf("num1 > num2 = %b\n" , num1>num2);
+        System.out.printf("num1 < num2 = %b\n" , num1<num2);
+        System.out.printf("num1 != num2 = %b\n" , num1!=num2);
 
         // logical operator && and ||
         // resulting sum after arithmetic operation
