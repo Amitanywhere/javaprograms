@@ -2,13 +2,17 @@ import java.util.Scanner;
 
 public class StringMethods{
     public static void main(String[] args){
-        Scanner input = new Scanner(System.in);
-        System.out.println("Enter any string: ");
-        String inputStr = input.nextLine();
+        String inputStr = "Hello how are you";
 
         int lenStr = inputStr.length();
 
         System.out.println("Length of input string - " + lenStr);
+
+        // String to charArray
+        char[] charArray = inputStr.toCharArray();
+        for(char character : charArray){
+            System.out.println(character);
+        }
 
         String lowerStr = inputStr.toLowerCase();
 
@@ -22,7 +26,7 @@ public class StringMethods{
 
         System.out.println("String after trim - " + trmStr);
 
-        System.out.println(inputStr.substring(3 , 6));
+        System.out.println(inputStr.substring(2 , 4));
 
         System.out.println(inputStr.replace(' ' , '.'));
 

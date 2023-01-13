@@ -4,7 +4,7 @@ public class AbstractClass {
         // to use the method of abstract we have to inherit subclass from it and create object of the subclass
         // a subclass must override all the abstract method of the abstract class
         // if there is any static attribute or Method in the abstractclass we can use it reference to the abstract class
-        Dog dog = new Dog();
+        Animal dog = new Dog();
         dog.makeSound();
         dog.animalEat();
         Animal.run();
