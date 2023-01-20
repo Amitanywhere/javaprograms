@@ -27,7 +27,7 @@ public class Student implements StudentMethods {
     public <T> void  updateAllDetails(T ...data){
         studentRoll = (int)data[0];
         studentName = (String) data[1];
-        studentMark = (int)data[2];
+        studentMark = (float)data[2];
         System.out.println("Details updated successfully......");
     }
 
@@ -61,20 +61,5 @@ public class Student implements StudentMethods {
     public float getMark(){
         return studentMark;
     }
-
-
-//    public static void main(String[] args) {
-//        try {
-//            Student std1 = new Student(12, "Asish" , 56);
-//            System.out.println(std1.getMark());
-//            System.out.println(std1.getId());
-//            System.out.println(std1.getDetails());
-//            std1.updateMark(54);
-//            System.out.println(std1.getDetails());
-//        }
-//        catch (Exception e){
-//            System.out.println(e.getMessage());
-//        }
-//    }
 
 }
