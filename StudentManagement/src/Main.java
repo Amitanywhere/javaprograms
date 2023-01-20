@@ -1,7 +1,6 @@
 import com.students.project.Institute;
 import com.students.project.Student;
 
-import java.sql.SQLOutput;
 import java.util.*;
 
 public class Main {
