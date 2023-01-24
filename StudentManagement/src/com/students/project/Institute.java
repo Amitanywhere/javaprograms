@@ -12,7 +12,7 @@ public class Institute {
     }
     public void getStudentList(){
         if(studentList.size() > 0){
-            System.out.println("---------------" + this.instituteName +  " Student List --------------------------");
+            System.out.println("--------------- " + this.instituteName +  " Student List --------------------------");
             for(Student student : studentList){
 
                 System.out.println(student.getDetails());
@@ -34,8 +34,6 @@ public class Institute {
                         found = true;
                     }
                 }
-            } else {
-                System.out.println("No students present");
             }
             if (!found) {
                 System.out.println("No student present with this id");
@@ -47,8 +45,13 @@ public class Institute {
     }
 
     public void addStudent(Student student){
-        studentList.add(student);
-        System.out.println("Student added successfully");
+        try {
+            studentList.add(student);
+            System.out.println("Student added successfully");
+        }
+        catch (Exception e){
+            System.out.println(e.getMessage());
+        }
     }
 
     public void removeStudent(String id){

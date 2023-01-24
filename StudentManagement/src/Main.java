@@ -6,41 +6,54 @@ import java.util.*;
 public class Main {
     public static ArrayList<Institute> instituteList = new ArrayList<>();
     public static void main(String[] args) {
-//        ArrayList<Institute> instituteList = new ArrayList<>();
-        Scanner input = new Scanner(System.in);
-        byte inputValue;
-        do{
-            System.out.println("--------------------------------Welcome To Student Management------------------------------");
-            System.out.println("Enter The Number you want to select");
-            System.out.println("1. Add Student");
-            System.out.println("2. Get Student List");
-            System.out.println("3. Update Student Details");
-            System.out.println("4. Delete Student");
-            System.out.println("0. Exit");
-            System.out.println("Enter Choise");
-            inputValue = Byte.parseByte(input.nextLine());
+//            Scanner input = new Scanner(System.in);
+            byte inputValue;
+            do {
+                System.out.println("--------------------------------Welcome To Student Management------------------------------");
+                System.out.println("Enter The Number you want to select");
+                System.out.println("1. Add Student");
+                System.out.println("2. Get Student List");
+                System.out.println("3. Update Student Details");
+                System.out.println("4. Delete Student");
+                System.out.println("0. Exit");
 
-            switch(inputValue){
-                case 1:
-                    addStudent();
-                    break;
-                case 2:
-                    getStudents();
-                    break;
-                case 3:
-                    updateStudent();
-                    break;
-                case 4:
-                    deleteStudent();
-                    break;
-                case 0:
-                    System.out.println("Thank you for using Student Management.....");
-                    break;
-                default:
-                    System.out.println("Enter valid choise");
+                    inputValue = takeInput();
+
+                    switch (inputValue) {
+                        case 1:
+                            addStudent();
+                            break;
+                        case 2:
+                            getStudents();
+                            break;
+                        case 3:
+                            updateStudent();
+                            break;
+                        case 4:
+                            deleteStudent();
+                            break;
+                        case 0:
+                            System.out.println("Thank you for using Student Management.....");
+                            break;
+                        default:
+                            System.out.println("Enter valid choice");
+                    }
+
             }
+            while (inputValue != 0);
+    }
+
+    public static byte takeInput(){
+        byte choiceInput = 5;
+        try{
+            Scanner input = new Scanner(System.in);
+            System.out.println("Enter choice - ");
+            choiceInput = Byte.parseByte(input.nextLine());
         }
-        while (inputValue != 0);
+        catch(Exception e){
+            System.out.println(e.getMessage());
+        }
+        return choiceInput;
     }
     public static void addStudent(){
         try {
@@ -80,12 +93,12 @@ public class Main {
     public static void getStudents(){
         Scanner input = new Scanner(System.in);
         System.out.println("Enter Institute Name - ");
-        Institute instDetails = null;
+        Institute institueObj = null;
         boolean isPresent = false;
-        String iName = input.nextLine();
+        String instName = input.nextLine();
         for(Institute institute : instituteList){
-            if(institute.instituteName.equals(iName)){
-                instDetails = institute;
+            if(institute.instituteName.equals(instName)){
+                institueObj = institute;
                 isPresent = true;
             }
         }
@@ -93,22 +106,22 @@ public class Main {
             System.out.println("No Institute Found With this name");
         }
         else{
-            instDetails.getStudentList();
+            institueObj.getStudentList();
         }
     }
     public static void updateStudent(){
         try {
             Scanner input = new Scanner(System.in);
-            Institute inst1 = null;
+            Institute instObj = null;
 
             System.out.println("Enter Institute Name");
             String nameInstitute = input.nextLine();
             for (Institute institute : instituteList) {
                 if (institute.instituteName.equals(nameInstitute)) {
-                    inst1 = institute;
+                    instObj = institute;
                 }
             }
-            if (inst1 == null) {
+            if (instObj == null) {
                 System.out.println("No institute found with this name");
                 return;
             }
@@ -121,7 +134,7 @@ public class Main {
             int newRoll = Integer.parseInt(input.nextLine());
             System.out.println("Enter updated mark of the student");
             float newMark = Float.parseFloat(input.nextLine());
-            inst1.updateStudent(stdntId, newRoll, newName, newMark);
+            instObj.updateStudent(stdntId, newRoll, newName, newMark);
         }
         catch(Exception e){
             System.out.println(e.getMessage());
@@ -130,22 +143,22 @@ public class Main {
     public static void deleteStudent(){
         try {
             Scanner input = new Scanner(System.in);
-            Institute inst2 = null;
+            Institute instObj = null;
 
             System.out.println("Enter Institute Name");
-            String nameInstitute2 = input.nextLine();
+            String nameInstitute = input.nextLine();
             for (Institute institute : instituteList) {
-                if (institute.instituteName.equals(nameInstitute2)) {
-                    inst2 = institute;
+                if (institute.instituteName.equals(nameInstitute)) {
+                    instObj = institute;
                 }
             }
-            if (inst2 == null) {
+            if (instObj == null) {
                 System.out.println("No institute found with this name");
                 return;
             }
             System.out.println("Enter Student Id to be deleted - ");
-            String dStudentId = input.nextLine();
-            inst2.removeStudent(dStudentId);
+            String studentId = input.nextLine();
+            instObj.removeStudent(studentId);
         }
         catch (Exception e){
             System.out.println(e.getMessage());
